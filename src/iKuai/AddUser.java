@@ -11,10 +11,10 @@ import net.sf.json.JSONObject;
  
 //对接口进行测试  
 public class AddUser {  
-    private static String url = "https://open.ikuai8.com/apis/action/ikoa4c4adf43aca4743/6fc260976d80425ceb01e5eab2ef7919/5";  
+    private static String url = "http://your iKuai url";  
     private static String charset = "utf-8";  
     private static HttpClientUtil httpClientUtil = null;  
-    public static final String PUBLICKEY = "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBmO65VMNZb7z6zFPdJEcBZzV7IiTwwDRW9nxyVNGzJwnVXA2dI9rCS+b86gBgsK1Ovk6hIJembrrtHe0aHhc+qCpKOBAVSo0AD+mBMGHOy5xve7WLCFBH+AS+ftVWQft0IjDbbvVrOBfpSJIpmmbFFKKCxLdGQdovakg7kiDimQIDAQAB";
+    public static final String PUBLICKEY = "your iKuai publicKey";
     public AddUser(){  
     	
         httpClientUtil = new HttpClientUtil();  
