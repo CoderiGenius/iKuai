@@ -11,7 +11,7 @@ public static String startSending(String username,String phoneNum) {
 	    String host = "http://sms.market.alicloudapi.com";
 	    String path = "/singleSendSms";
 	    String method = "GET";
-	    String appcode = "9050e3ad7e0b4d6c8ab8010f86e3758f";
+	    String appcode = "your aliyun appCode";
 	    Map<String, String> headers = new HashMap<String, String>();
 	    //最后在header中的格式(中间是英文空格)为Authorization:APPCODE 83359fd73fe94948385f570e3c139105
 	    headers.put("Authorization", "APPCODE " + appcode);
@@ -20,7 +20,7 @@ public static String startSending(String username,String phoneNum) {
 	    querys.put("ParamString", paramString);
 	    querys.put("RecNum", phoneNum);
 	   querys.put("SignName", "物联网实验室");
-	    querys.put("TemplateCode", "SMS_96560076");
+	    querys.put("TemplateCode", "your smsCode");
 	    String fedBack = null;
 	    System.out.println(paramString);
 	    try {
