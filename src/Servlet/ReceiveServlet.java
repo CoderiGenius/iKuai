@@ -52,7 +52,8 @@ public class ReceiveServlet extends HttpServlet {
 		String phoneNum = request.getParameter("phoneNum");
 		String ID = request.getParameter("ID");
 		//身份验证
-		String matchedName = database.MatchID.Match(ID, username);
+		//String matchedName = database.MatchID.Match(ID, username);
+		String matchedName = database.RedisMatch.MatchID(ID, username);
 		if(matchedName!=null)
 		{
 			// 密码对应判断
@@ -70,11 +71,12 @@ public class ReceiveServlet extends HttpServlet {
 						String status = AddUser.Add(username, password1, classNum,matchedName);
 						if (status.equals("0")) {
 							System.out.println("add success!");
+							database.RedisMatch.addStatus(ID);
 							//response.getWriter().print("<script> alert(\"提交注册信息成功！请等待通知短信！\"); </script>");
 							request.setAttribute("alert", "提交注册信息成功！请等待通知短信。");
 							request.getRequestDispatcher("../index.jsp").forward(request, response);
 							//发送短信
-							sendMessage.Send.startSending(matchedName, phoneNum);
+							//sendMessage.Send.startSending(matchedName, phoneNum);
 						}
 						else{
 							request.setAttribute("alert", "用户已存在");
