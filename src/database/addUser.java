@@ -16,7 +16,7 @@ public static String Add(String ID,String time){
      String user = "root"; 
 
      // MySQL����ʱ������
-     String password1 = "25801998";
+     String password1 = "pwd";
            try { 
             // ������������
             Class.forName(driver);
