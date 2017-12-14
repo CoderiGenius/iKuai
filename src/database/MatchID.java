@@ -16,7 +16,7 @@ public static String Match(String ID,String userNum){
            String user = "root"; 
 
            // MySQL����ʱ������
-           String password1 = "25801998";
+           String password1 = "password";
 
            try { 
             // ������������
